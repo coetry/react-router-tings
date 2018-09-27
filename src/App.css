@@ -2,6 +2,8 @@ div.side-nav {
   border-right: 1px solid lightgray;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center; 
   padding: 2rem;
 }
@@ -36,5 +38,5 @@ main {
 }
 
 svg {
-  width: 100px;
+  width: 105px;
 }

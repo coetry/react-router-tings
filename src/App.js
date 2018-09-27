@@ -13,8 +13,8 @@ class App extends Component {
         <>
           <Nav />
           <main>
-            <Route exact path="/" component={CircleRoute} />
-            <Route path="/:id" component={CircleRoute} />
+            <Route exact path="/" component={BoltRoute} />
+            <Route path="/:id" component={BoltRoute} />
           </main>
         </>
       </Router>
@@ -24,6 +24,16 @@ class App extends Component {
 
 function Nav () {
   return <div className="side-nav">
+    <svg>
+      <circle 
+        cx="50" 
+        cy="50" 
+        r="48" 
+        fill="none" 
+        stroke="rgb(0,0,0)"
+        stroke-width="2"
+      />
+    </svg>
     <nav>
       <Link to="/">index</Link>
       <Link to="/home">home</Link>
@@ -43,7 +53,21 @@ function CircleRoute ({ match }) {
       : <code>index</code>
     }
   </>
+}
 
+function BoltRoute ({ match }) {  
+  return <>
+    <svg>
+      <polygon 
+        points="0,100 50,25 50,75 100,0" 
+        fill={randomColor()}
+      />
+    </svg>
+    { match.params.id 
+      ? <code>{ match.params.id }</code>
+      : <code>index</code>
+    }
+  </>
 }
 
 function randomColor () {
