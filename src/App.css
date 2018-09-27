@@ -26,3 +26,15 @@ nav a:visited {
 nav a:hover {
   font-weight: bold;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+svg {
+  width: 100px;
+}
